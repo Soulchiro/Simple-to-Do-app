@@ -23,16 +23,22 @@ const TodoApp = () => {
   };
 
   return (
-    <div className="todo-app">
-      <h1>Todo App</h1>
-      <div className="input-container">
+    <div className="container">
+      <div className="heading">
+        <h1>To-do List</h1>
+      <div/>
+        <div className="form">
+
         <input
           type="text"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Add a new todo"
+          placeholder="Add a new To-Do"
         />
+
         <button onClick={addTodo}>Add</button>
+
+        </div>
       </div>
       <ul>
         {todos.map((todo, index) => (
